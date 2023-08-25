@@ -33,7 +33,7 @@ body{
 
 .person-content{
     height: 70%;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,6 +150,76 @@ body{
     height: 20px;
 
     color: var(--color-white);
+}
+
+.person-background {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    flex-direction: column;
+
+    background-image: url(./img/img1.jpg);
+    background-size: cover;
+    background-position: top center;
+
+    z-index: 1;
+}
+
+.person-background::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: .7;
+    z-index: -1;
+
+    background: 
+    linear-gradient(90deg, transparent 30%, var(--color-black)),
+    linear-gradient(180deg, transparent 30%, var(--color-black)),
+    linear-gradient(0deg, transparent 65%, var(--color-black));
+}
+
+.wrapper-profile-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 14px;
+    margin: 20px 15px;
+    
+    border-radius: 50%;
+
+    background: 
+    radial-gradient(rgba(0,0,0.15) 60%, transparent 0),
+    radial-gradient(#000 68%, transparent 0),
+    linear-gradient(to top right, #0077ff 0%, #ff0000 100%);
+}
+
+.profile-photo {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.links a img {
+    width: 30px;
+    height: 30px;
+
+    margin: 10px;
+    filter: brightness(.7);
+
+}
+
+.links a img:hover{
+    filter: brightness(1);
 }
 
 @keyframes written_text {
