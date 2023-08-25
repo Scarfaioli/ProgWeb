@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-white: #fff;
+    --color-black: #000;
+    --color-red: #ec3c21;
+    --color-blue: #3c20f7
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: black;
+}
+
+#person{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.person-content{
+    height: 70%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    background: var(--color-black);
+}
+
+.person-content div h1{
+    color: transparent;
+    padding: 0px 4px;
+    position: relative;
+    width: fit-content;
+
+    font-size: 4.5rem;
+    line-height: 6rem;
+
+    animation: written_text .5s ease forwards;
+}
+
+.person-content div h1:nth-child(1){
+    animation-delay: 1s;
+}
+
+.person-content div h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+.person-content div h1:nth-child(3){
+    animation: written_text_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+.person-content div h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    width: 0px;
+    height: 100%;
+    background: var(--color-blue);
+
+    animation: written_text_box 1s ease;
+}
+
+.person-content div h1:nth-child(1) span{
+    animation-delay: 0.5s;
+}
+
+.person-content div h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+.person-content div h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+.person-name{
+    margin-top: 11rem;
+}
+
+.stacks-content{
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    margin-top: 6rem;
+}
+
+.stacks-content h3{
+    color: var(--color-white);
+    font-size: 1.15rem;
+
+    margin-left: 20px;
+}
+
+.stacks{
+    display: flex;
+    align-items: center;
+}
+
+.stacks ul li{
+    display: flex;
+    align-items: center;
+    
+    position: relative;
+
+    margin: 10px;
+    padding: 10px;
+
+    list-style: none;
+}
+
+.stacks ul li img{
+    width: 30px;
+    height: auto;
+
+    transition: transform .3s ease;
+}
+
+.stacks ul li div img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.stacks ul li div:hover::after{
+    content: attr(data);
+    position: absolute;
+    top: 50px;
+    left: 10px;
+
+    width: 20px;
+    height: 20px;
+
+    color: var(--color-white);
+}
+
+@keyframes written_text {
+    100%{
+        color: var(--color-white);
+
+    }
+}
+
+@keyframes written_text_name {
+    100%{
+        color: var(--color-red);
+    }
+}
+
+@keyframes written_text_box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
