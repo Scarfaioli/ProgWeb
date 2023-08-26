@@ -1,248 +1,375 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-:root{
-    --color-white: #fff;
-    --color-black: #000;
-    --color-red: #ec3c21;
-    --color-blue: #3c20f7
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-red: #ec3c21;
+  --color-blue: #3c20f7;
 }
 
-html{
-    scroll-behavior: smooth;
-    font-size: 10px;
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background: black;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-#person{
-    height: 100vh;
-    width: 100%;
+#person {
+  height: 100vh;
+  width: 100%;
+  background: black;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.person-content{
-    height: 70%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.person-content {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    flex-direction: column;
-    background: var(--color-black);
+  flex-direction: column;
+  background: var(--color-black);
 }
 
-.person-content div h1{
-    color: transparent;
-    padding: 0px 4px;
-    position: relative;
-    width: fit-content;
+.person-content div h1 {
+  color: transparent;
+  padding: 0px 4px;
+  position: relative;
+  width: fit-content;
 
-    font-size: 4.5rem;
-    line-height: 6rem;
+  font-size: 4.5rem;
+  line-height: 6rem;
 
-    animation: written_text .5s ease forwards;
+  animation: written_text 0.5s ease forwards;
 }
 
-.person-content div h1:nth-child(1){
-    animation-delay: 1s;
+.person-content div h1:nth-child(1) {
+  animation-delay: 1s;
 }
 
-.person-content div h1:nth-child(2){
-    animation-delay: 2s;
+.person-content div h1:nth-child(2) {
+  animation-delay: 2s;
 }
 
-.person-content div h1:nth-child(3){
-    animation: written_text_name .5s ease forwards;
-    animation-delay: 3s;
+.person-content div h1:nth-child(3) {
+  animation: written_text_name 0.5s ease forwards;
+  animation-delay: 3s;
 }
 
-.person-content div h1 span{
-    position: absolute;
-    top: 0;
-    left: 0;
+.person-content div h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
 
+  width: 0px;
+  height: 100%;
+  background: var(--color-blue);
 
-    width: 0px;
-    height: 100%;
-    background: var(--color-blue);
-
-    animation: written_text_box 1s ease;
+  animation: written_text_box 1s ease;
 }
 
-.person-content div h1:nth-child(1) span{
-    animation-delay: 0.5s;
+.person-content div h1:nth-child(1) span {
+  animation-delay: 0.5s;
 }
 
-.person-content div h1:nth-child(2) span{
-    animation-delay: 1.5s;
+.person-content div h1:nth-child(2) span {
+  animation-delay: 1.5s;
 }
 
-.person-content div h1:nth-child(3) span{
-    animation-delay: 2.5s;
+.person-content div h1:nth-child(3) span {
+  animation-delay: 2.5s;
 }
 
-.person-name{
-    margin-top: 11rem;
+.person-name {
+  margin-top: 11rem;
 }
 
-.stacks-content{
-    display: flex;
-    justify-content: center;
+.stacks-content {
+  display: flex;
+  justify-content: center;
 
-    flex-direction: column;
-    margin-top: 6rem;
+  flex-direction: column;
+  margin-top: 6rem;
 }
 
-.stacks-content h3{
-    color: var(--color-white);
-    font-size: 1.15rem;
+.stacks-content h3 {
+  color: var(--color-white);
+  font-size: 1.15rem;
 
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
-.stacks{
-    display: flex;
-    align-items: center;
+.stacks {
+  display: flex;
+  align-items: center;
 }
 
-.stacks ul li{
-    display: flex;
-    align-items: center;
-    
-    position: relative;
+.stacks ul li {
+  display: flex;
+  align-items: center;
 
-    margin: 10px;
-    padding: 10px;
+  position: relative;
 
-    list-style: none;
+  margin: 10px;
+  padding: 10px;
+
+  list-style: none;
 }
 
-.stacks ul li img{
-    width: 30px;
-    height: auto;
+.stacks ul li img {
+  width: 30px;
+  height: auto;
 
-    transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
-.stacks ul li div img:hover{
-    transform: scale(1.2);
-    cursor: pointer;
+.stacks ul li div img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
-.stacks ul li div:hover::after{
-    content: attr(data);
-    position: absolute;
-    top: 50px;
-    left: 10px;
+.stacks ul li div:hover::after {
+  content: attr(data);
+  position: absolute;
+  top: 50px;
+  left: 10px;
 
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .person-background {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    position: relative;
-    flex-direction: column;
+  position: relative;
+  flex-direction: column;
 
-    background-image: url(./img/img1.jpg);
-    background-size: cover;
-    background-position: top center;
+  background-image: url(./img/img1.jpg);
+  background-size: cover;
+  background-position: top center;
 
-    z-index: 1;
+  z-index: 1;
 }
 
-.person-background::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.person-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 
-    opacity: .7;
-    z-index: -1;
+  opacity: 0.7;
+  z-index: -1;
 
-    background: 
-    linear-gradient(90deg, transparent 30%, var(--color-black)),
+  background: linear-gradient(90deg, transparent 30%, var(--color-black)),
     linear-gradient(180deg, transparent 30%, var(--color-black)),
     linear-gradient(0deg, transparent 65%, var(--color-black));
 }
 
-.wrapper-profile-photo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.wrapper-profile-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    padding: 14px;
-    margin: 20px 15px;
-    
-    border-radius: 50%;
+  padding: 14px;
+  margin: 20px 15px;
 
-    background: 
-    radial-gradient(rgba(0,0,0.15) 60%, transparent 0),
+  border-radius: 50%;
+
+  background: radial-gradient(rgba(0, 0, 0.15) 60%, transparent 0),
     radial-gradient(#000 68%, transparent 0),
     linear-gradient(to top right, #0077ff 0%, #ff0000 100%);
 }
 
 .profile-photo {
-    width: 100%;
-    border-radius: 50%;
+  width: 100%;
+  border-radius: 50%;
 }
 
 .links a img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 
-    margin: 10px;
-    filter: brightness(.7);
+  margin: 10px;
+  filter: brightness(0.7);
+  transition: all 0.3s ease;
+}
+
+.links a img:hover {
+  transform: scale(1.15);
+  filter: brightness(1);
+}
+
+/*Home*/
+
+#about {
+  height: 100vh;
+  width: 100%;
+  background: var(--color-black);
+
+  display: flex;
+  color: var(--color-white);
+}
+
+.background-about {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper {
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background: linear-gradient(90deg, transparent 30%, var(--color-black)),
+    linear-gradient(180deg, transparent 30%, var(--color-black)),
+    linear-gradient(360deg, transparent 65%, var(--color-black));
+}
+
+.img-wrapper img {
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.box-about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 50%;
+
+  padding: 3rem;
+}
+
+.section-subtitle h2 p {
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.section-subtitle h2 p:nth-child(2) span {
+  padding: 3px 5px;
+  border-radius: 4px;
+
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+.box-about h3 {
+  margin: 3rem;
+  font-size: 2rem;
+}
+
+.box-about h3 p {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: var(--color-black);
+  background: var(--color-blue);
+
+  width: fit-content;
+}
+
+.box-about h4 {
+  margin: 1rem 3rem;
+  font-size: 1.5rem;
 
 }
 
-.links a img:hover{
-    filter: brightness(1);
+.box-about h4 p {
+  display: inline;
+  padding: 2px 4px;
+  color: var(--color-red);
+  font-size: bold;
+  font-weight: 1.75rem;
 }
+
+.button-cv {
+    display: flex;
+
+    max-width: 190px;
+    margin: 4rem 3rem;
+}
+
+.button-cv button {
+    display: inline-block;
+
+    width: 100%;
+    max-width: 172px;
+
+    padding: 10px;
+    margin-bottom: 3rem;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: .15rem;
+
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button-cv button:hover {
+    transition: all .3s ease;
+    filter: brightness(.8);
+}
+
+/*About me*/
 
 @keyframes written_text {
-    100%{
-        color: var(--color-white);
-
-    }
+  100% {
+    color: var(--color-white);
+  }
 }
 
 @keyframes written_text_name {
-    100%{
-        color: var(--color-red);
-    }
+  100% {
+    color: var(--color-red);
+  }
 }
 
 @keyframes written_text_box {
-    50%{
-        width: 100%;
-        left: 0;
-    }
+  50% {
+    width: 100%;
+    left: 0;
+  }
 
-    100% {
-        width: 0;
-        left: 100%;
-    }
+  100% {
+    width: 0;
+    left: 100%;
+  }
 }
