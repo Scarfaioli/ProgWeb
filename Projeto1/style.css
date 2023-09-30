@@ -380,7 +380,7 @@ body {
   margin: 4rem 3rem;
 }
 
-.button-cv button {
+.button-cv a {
   display: inline-block;
 
   width: 100%;
@@ -389,18 +389,23 @@ body {
   padding: 10px;
   margin-bottom: 3rem;
 
+  font-size: 1.3rem;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: 0.15rem;
+  color: var(--color-black);
+  background: var(--color-white);
+  text-align: center;
+  text-decoration: none;
 
   border-radius: 10px;
   cursor: pointer;
 }
 
-.button-cv button:hover {
+.button-cv a:hover {
   transition: all 0.3s ease;
   filter: brightness(0.8);
-}
+} 
 
 /*About me*/
 
